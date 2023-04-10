@@ -1,35 +1,66 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(./fonts/RobotoC/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Bold';
+    src: url(./fonts/RobotoC/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-Italic.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Bold Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Light';
+    src: url(./fonts/RobotoC/RobotoCondensed-Light.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Light Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'Digital 7 Mono';
+    src: url(./fonts/Digital7/digital-7-Mono.ttf);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+body {
+    min-height: 100vh;
+    color: #242424 !important;
+    background: #ffffff !important;
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: Roboto, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+      Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body.darkmode {
+    color: #ffffff !important;
+    background: #242424 !important;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+kbd {
+    border-radius: 2px;
+    padding: 2px;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0.4);
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
 }
