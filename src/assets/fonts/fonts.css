@@ -1,0 +1,117 @@
+// Roboto Condensed
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(./fonts/RobotoC/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Bold';
+    src: url(./fonts/RobotoC/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-Italic.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Bold Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Light';
+    src: url(./fonts/RobotoC/RobotoCondensed-Light.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed Light Italic';
+    src: url(./fonts/RobotoC/RobotoCondensed-LightItalic.ttf);
+}
+
+// Digital 7
+@font-face {
+    font-family: 'Digital 7';
+    src: url(./fonts/Digital7/digital-7.ttf);
+}
+@font-face {
+    font-family: 'Digital 7 Mono';
+    src: url(./fonts/Digital7/digital-7-Mono.ttf);
+}
+@font-face {
+    font-family: 'Digital 7 Italic';
+    src: url(./fonts/Digital7/digital-7-Italic.ttf);
+}
+@font-face {
+    font-family: 'Digital 7 Mono Italic';
+    src: url(./fonts/Digital7/digital-7-Mono-Italic.ttf);
+}
+
+// Poppins
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(./fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url(./fonts/Poppins/Poppins-Italic.ttf);
+}
+@font-face {
+    font-family: 'Poppins Bold Italic';
+    src: url(./fonts/Poppins/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins ExtraBold';
+    src: url(./fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'Poppins ExtraBold Italic';
+    src: url(./fonts/Poppins/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins Light';
+    src: url(./fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: 'Poppins Light Italic';
+    src: url(./fonts/Poppins/Poppins-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins ExtraLight';
+    src: url(./fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: 'Poppins ExtraLight Italic';
+    src: url(./fonts/Poppins/Poppins-ExtraLightItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(./fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: 'Poppins Medium Italic';
+    src: url(./fonts/Poppins/Poppins-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url(./fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Poppins SemiBold Italic';
+    src: url(./fonts/Poppins/Poppins-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins Thin';
+    src: url(./fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+    font-family: 'Poppins Thin Italic';
+    src: url(./fonts/Poppins/Poppins-ThinItalic.ttf);
+}
+@font-face {
+    font-family: 'Poppins Black';
+    src: url(./fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: 'Poppins Black Italic';
+    src: url(./fonts/Poppins/Poppins-BlackItalic.ttf);
+}

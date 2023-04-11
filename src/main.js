@@ -3,6 +3,8 @@ import Storage from 'vue-ls'
 import App from './App.vue';
 import router from './router';
 
+import './assets/fonts/fonts.css';
+import './assets/main.css';
 import 'bulma/bulma.sass';
 import 'fork-awesome/css/fork-awesome.min.css';
 
