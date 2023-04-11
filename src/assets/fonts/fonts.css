@@ -1,4 +1,4 @@
-// Roboto Condensed
+/* Roboto Condensed */
 @font-face {
     font-family: 'Roboto Condensed';
     src: url(./fonts/RobotoC/RobotoCondensed-Regular.ttf);
@@ -24,7 +24,7 @@
     src: url(./fonts/RobotoC/RobotoCondensed-LightItalic.ttf);
 }
 
-// Digital 7
+/* Digital 7 */
 @font-face {
     font-family: 'Digital 7';
     src: url(./fonts/Digital7/digital-7.ttf);
@@ -42,7 +42,7 @@
     src: url(./fonts/Digital7/digital-7-Mono-Italic.ttf);
 }
 
-// Poppins
+/* Poppins */
 @font-face {
     font-family: 'Poppins';
     src: url(./fonts/Poppins/Poppins-Regular.ttf);
