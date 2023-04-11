@@ -3,12 +3,16 @@ import { execSync } from 'child_process';
 import yaml from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
+import { VitePWA } from 'vite-plugin-pwa'
 
 import { defineConfig, createLogger } from 'vite';
 import vue from '@vitejs/plugin-vue';
 const viteLogger = createLogger();
 
-const siteConf = './site.yml';
+const siteConfFile = './site.yml',
+    siteConf = yaml.load(fs.readFileSync(siteConfFile, 'utf-8'));
+
+viteLogger.info("Site configuration loaded and parsed: " + JSON.stringify(siteConf, null, 2), {timestamp: true});
 
 const siteDataDir = './_data/';
 let siteDataFileObj = {};
@@ -25,16 +29,32 @@ fs.readdirSync(siteDataDir, 'utf-8').forEach(siteDataFilename=>{
 
 viteLogger.info("Data loaded and parsed: " + JSON.stringify(siteDataFileObj, null, 2), {timestamp: true});
 
+console.log("dev mode", process.env.NODE_ENV);
+
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue()],
+    plugins: [
+        vue(),
+        VitePWA({
+            registerType: 'autoUpdate',
+            devOptions: {
+                enabled: process.env.NODE_ENV == "development"
+            },
+            manifest: {
+                ...siteConf,
+				short_name: siteConf.name,
+				start_url: '.',
+				display: 'standalone',
+            }
+        })
+    ],
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
         }
     },
     define: {
-        'SITE_CONF': JSON.stringify(yaml.load(fs.readFileSync(siteConf, 'utf-8'))),
+        'SITE_CONF': JSON.stringify(),
         'SITE_DATA': JSON.stringify(siteDataFileObj),
         'GIT_COMMIT_HASH': JSON.stringify(execSync('git rev-parse HEAD').toString().trim()),
         'BUILT_AT': JSON.stringify(Date.now()),
