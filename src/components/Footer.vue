@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <div class="mt-5">
+    <div>
         <p>commit: {{ commit }}</p>
         <p v-if="!isDev">Built at: {{ builtAt }}</p>
         <p v-else>DEV MODE</p>

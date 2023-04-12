@@ -29,8 +29,6 @@ fs.readdirSync(siteDataDir, 'utf-8').forEach(siteDataFilename=>{
 
 viteLogger.info("Data loaded and parsed: " + JSON.stringify(siteDataFileObj, null, 2), {timestamp: true});
 
-console.log("dev mode", process.env.NODE_ENV);
-
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
@@ -54,7 +52,7 @@ export default defineConfig({
         }
     },
     define: {
-        'SITE_CONF': JSON.stringify(),
+        'SITE_CONF': JSON.stringify(siteConf),
         'SITE_DATA': JSON.stringify(siteDataFileObj),
         'GIT_COMMIT_HASH': JSON.stringify(execSync('git rev-parse HEAD').toString().trim()),
         'BUILT_AT': JSON.stringify(Date.now()),
