@@ -9,25 +9,20 @@ export default {
 </script>
 
 <template>
-    <div>
-        <div class="columns">
-            <div class="column">
-                <div class="columns">
-                    <div class="column">
-                        <a href="/" class="site-avatar">
-                            <img :src="site.avatar" :alt="site.name">
-                        </a>
-                    </div>
-                    <div class="column">
-                        <h1>{{ site.name }}</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                Second column
-            </div>
+    <div class="masthead clearfix">
+        <a href="/" class="site-avatar">
+            <img :src="site.avatar" :alt="site.name">
+        </a>
+        <div class="site-info">
+            <h1 class="site-name"><a href="/" class="inherit">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
         </div>
-        <hr />
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="https://linktr.ee/Greep" target="_blank">Links</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
     </div>
 </template>
 
@@ -37,5 +32,21 @@ export default {
     width: 70px;
     height: 70px;
     margin-right: 15px;
+}
+.site-info {
+    float: left;
+}
+.site-name {
+    margin: 0;
+    cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: inherit !important;
+}
+.site-description {
+    margin: -5px 0 0 0;
+    font-size: 16px;
 }
 </style>

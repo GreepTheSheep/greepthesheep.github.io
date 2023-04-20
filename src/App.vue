@@ -45,9 +45,11 @@ export default {
 </script>
 
 <template>
-    <header class="container is-max-desktop mb-5">
-        <HeaderComponent />
-    </header>
+    <div class="wrapper-masthead">
+        <header class="container is-max-desktop">
+            <HeaderComponent />
+        </header>
+    </div>
     <main class="container is-max-desktop">
         {{ site }}
         <RouterView />
@@ -58,4 +60,7 @@ export default {
 </template>
 
 <style scoped>
+.wrapper-masthead {
+    margin-bottom: 50px;
+}
 </style>
