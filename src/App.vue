@@ -54,8 +54,10 @@ export default {
         {{ site }}
         <RouterView />
     </main>
-    <footer class="container is-max-desktop mt-5">
-        <FooterComponent />
+    <footer class="footer">
+        <div class="container is-max-desktop mt-5">
+            <FooterComponent />
+        </div>
     </footer>
 </template>
 

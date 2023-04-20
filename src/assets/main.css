@@ -76,6 +76,11 @@ nav a {
     letter-spacing: 1px;
 }
 
+footer {
+    color: inherit !important;
+    background: inherit !important;
+}
+
 .masthead {
     padding: 20px 0;
     border-bottom: 1px solid #eee;

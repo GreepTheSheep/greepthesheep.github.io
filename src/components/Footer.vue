@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="has-text-centered is-size-7">
         <p>commit: {{ commit }}</p>
         <p v-if="!isDev">Built at: {{ builtAt }}</p>
         <p v-else>DEV MODE</p>
