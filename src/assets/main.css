@@ -28,7 +28,7 @@ body {
 
 body.darkmode {
     color: #ffffff !important;
-    background: #242424 !important;
+    background: #333333 !important;
 }
 
 kbd {
@@ -79,6 +79,10 @@ nav a {
 footer {
     color: inherit !important;
     background: inherit !important;
+}
+
+.container {
+    max-width: 740px !important;
 }
 
 .masthead {

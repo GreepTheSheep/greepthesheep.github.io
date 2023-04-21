@@ -18,6 +18,13 @@ export default {
         }
     },
     mounted() {
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.head.appendChild(link);
+        }
+        link.href = this.site.avatar;
         console.log("is dev mode?", import.meta.env.DEV);
         this.setDarkMode();
         window.matchMedia('(prefers-color-scheme: dark)')
@@ -46,16 +53,15 @@ export default {
 
 <template>
     <div class="wrapper-masthead">
-        <header class="container is-max-desktop">
+        <header class="container">
             <HeaderComponent />
         </header>
     </div>
-    <main class="container is-max-desktop">
-        {{ site }}
+    <main class="container">
         <RouterView />
     </main>
     <footer class="footer">
-        <div class="container is-max-desktop mt-5">
+        <div class="container mt-5">
             <FooterComponent />
         </div>
     </footer>
