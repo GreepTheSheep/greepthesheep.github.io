@@ -49,10 +49,10 @@ a, a:hover, a:visited, a:active {
     cursor: pointer;
 }
 
-a:active, a.active {
+a:active, a.active, a.router-link-active {
     color: #005eaa !important;
 }
-body.darkmode a:active, body.darkmode a.active {
+body.darkmode a:active, body.darkmode a.active, body.darkmode a.router-link-active {
     color: #79c3ff !important;
 }
 a:hover {

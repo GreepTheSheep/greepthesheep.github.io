@@ -18,7 +18,7 @@ export default {
             <p class="site-description">{{ site.description }}</p>
         </div>
         <nav>
-            <router-link to="/" class="active">Home</router-link>
+            <router-link to="/">Home</router-link>
             <a href="https://linktr.ee/Greep" target="_blank">Links</a>
             <router-link to="/blog">Blog</router-link>
             <router-link to="/contact">Contact</router-link>
