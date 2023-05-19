@@ -1,8 +1,13 @@
 <script>
 export default {
+    props: {
+        isDarkMode: {
+            type: Boolean
+        },
+    },
     data() {
         return {
-            STAR_COLOR: "#fff",
+            STAR_COLOR: this.isDarkMode ? "#ddd" : "#222",
             STAR_SIZE: 3,
             STAR_MIN_SCALE: 0.2,
             OVERFLOW_THRESHOLD: 50,
@@ -100,6 +105,8 @@ export default {
             } );
         },
         update() {
+
+            this.STAR_COLOR = this.isDarkMode ? "#ddd" : "#222";
 
             this.velocity.tx *= 0.96;
             this.velocity.ty *= 0.96;
