@@ -1,9 +1,10 @@
 <script>
 import { RouterView } from 'vue-router'
+import BackgroundComponent from './components/Background.vue';
 import HeaderComponent from './components/Header.vue';
 import FooterComponent from './components/Footer.vue';
 export default {
-    components: { RouterView, HeaderComponent, FooterComponent },
+    components: { RouterView, BackgroundComponent, HeaderComponent, FooterComponent },
     updated() {
         if (this.$route.path != "/")
             window.document.title = this.$route.name + " - " + this.site.name;
@@ -52,6 +53,7 @@ export default {
 </script>
 
 <template>
+    <BackgroundComponent />
     <div class="wrapper-masthead">
         <header class="container">
             <HeaderComponent />
