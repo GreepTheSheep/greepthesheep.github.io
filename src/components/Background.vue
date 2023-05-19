@@ -210,11 +210,11 @@ canvas {
 
 body canvas {
     background-color: #fff;
-    background-image: radial-gradient(circle at top right, rgb(218, 158, 255), transparent), radial-gradient(circle at 20% 80%, rgb(151, 225, 255), transparent);
+    background-image: radial-gradient(circle at top right, rgb(209, 136, 255), transparent), radial-gradient(circle at 20% 80%, rgb(125, 218, 255), transparent);
 }
 
 body.darkmode canvas {
     background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(157, 0, 255, 0.3), transparent), radial-gradient(circle at 20% 80%, rgba(0, 183, 255, 0.3), transparent);
+    background-image: radial-gradient(circle at top right, rgba(157, 0, 255, 0.15), transparent), radial-gradient(circle at 20% 80%, rgba(0, 183, 255, 0.15), transparent);
 }
 </style>
