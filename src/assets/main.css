@@ -50,7 +50,7 @@ a, a:hover, a:visited, a:active {
 }
 
 a:active, a.active, a.router-link-active {
-    color: #005eaa !important;
+    color: #194568 !important;
 }
 body.darkmode a:active, body.darkmode a.active, body.darkmode a.router-link-active {
     color: #79c3ff !important;
