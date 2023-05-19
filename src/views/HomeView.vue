@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h2 class="headerA poppins" style="text-align: center;">
+    <h2 class="has-text-centered is-size-3 headerA poppins">
         Hello!<br />
         My name is Matthieu<br />
         or <span class="name">Greep</span>.
@@ -34,8 +34,8 @@
 }
 .poppins {
     font-family: 'Poppins Thin';
-    font-size: 1.5em;
     line-height: 1.2em;
+    font-weight: bold;
 }
 .name {
     color: chartreuse;
