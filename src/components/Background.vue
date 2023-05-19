@@ -17,11 +17,11 @@ export default {
             canvas: null,
             context: null,
             scale: 1,  // device pixel ratio
-            width: 0,
-            height: 0,
+            width: null,
+            height: null,
             stars: [],
-            pointerX: 0,
-            pointerY: 0,
+            pointerX: null,
+            pointerY: null,
             velocity: { x: 0, y: 0, tx: 0, ty: 0, z: 0.000005 },
             touchInput: false
         }
@@ -202,14 +202,21 @@ export default {
 
 <style scoped lang="scss">
 canvas {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: background-image 1s, background-color 1s;
+}
+
+body canvas {
+    background-color: #fff;
+    background-image: radial-gradient(circle at top right, rgb(218, 158, 255),       transparent),
+        radial-gradient(circle at 20% 80%, rgb(151, 225, 255), transparent);
 }
 
 body.darkmode canvas {
     background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
+    background-image: radial-gradient(circle at top right, rgba(157, 0, 255, 0.3),       transparent),
+        radial-gradient(circle at 20% 80%, rgba(0, 183, 255, 0.3), transparent);
 }
 </style>
