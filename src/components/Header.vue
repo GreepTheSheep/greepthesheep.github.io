@@ -10,18 +10,18 @@ export default {
 
 <template>
     <div class="masthead clearfix">
-        <a href="/" class="site-avatar">
+        <router-link to="/" class="site-avatar">
             <img :src="site.avatar" :alt="site.name">
-        </a>
+        </router-link>
         <div class="site-info">
-            <h1 class="site-name"><a href="/" class="inherit">{{ site.name }}</a></h1>
+            <h1 class="site-name"><router-link to="/" class="inherit">{{ site.name }}</router-link></h1>
             <p class="site-description">{{ site.description }}</p>
         </div>
         <nav>
-            <a href="/" class="active">Home</a>
+            <router-link to="/" class="active">Home</router-link>
             <a href="https://linktr.ee/Greep" target="_blank">Links</a>
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
+            <router-link to="/blog">Blog</router-link>
+            <router-link to="/contact">Contact</router-link>
         </nav>
     </div>
 </template>
