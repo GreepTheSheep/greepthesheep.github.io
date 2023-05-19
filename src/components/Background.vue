@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-            STAR_COLOR: this.isDarkMode ? "#ddd" : "#222",
+            STAR_COLOR: this.isDarkMode ? "#9dfab6" : "#0c451b",
             STAR_SIZE: 3,
             STAR_MIN_SCALE: 0.2,
             OVERFLOW_THRESHOLD: 50,
@@ -106,7 +106,7 @@ export default {
         },
         update() {
 
-            this.STAR_COLOR = this.isDarkMode ? "#ddd" : "#222";
+            this.STAR_COLOR = this.isDarkMode ? "#9dfab6" : "#0c451b";
 
             this.velocity.tx *= 0.96;
             this.velocity.ty *= 0.96;
@@ -205,18 +205,16 @@ canvas {
     position: fixed;
     width: 100%;
     height: 100%;
-    transition: background-image 1s, background-color 1s;
+    transition: background 1s, background-image 1s, background-color 1s;
 }
 
 body canvas {
     background-color: #fff;
-    background-image: radial-gradient(circle at top right, rgb(218, 158, 255),       transparent),
-        radial-gradient(circle at 20% 80%, rgb(151, 225, 255), transparent);
+    background-image: radial-gradient(circle at top right, rgb(218, 158, 255), transparent), radial-gradient(circle at 20% 80%, rgb(151, 225, 255), transparent);
 }
 
 body.darkmode canvas {
     background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(157, 0, 255, 0.3),       transparent),
-        radial-gradient(circle at 20% 80%, rgba(0, 183, 255, 0.3), transparent);
+    background-image: radial-gradient(circle at top right, rgba(157, 0, 255, 0.3), transparent), radial-gradient(circle at 20% 80%, rgba(0, 183, 255, 0.3), transparent);
 }
 </style>
