@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-    <BackgroundComponent />
+    <BackgroundComponent :isDarkMode="isDarkMode" />
     <div class="wrapper-masthead">
         <header class="container">
             <HeaderComponent />
@@ -64,7 +64,7 @@ export default {
     </main>
     <footer class="footer">
         <div class="container mt-5">
-            <FooterComponent />
+            <FooterComponent :isDarkMode="isDarkMode" @darkModeBtnClicked="toggleDarkMode" />
         </div>
     </footer>
 </template>
