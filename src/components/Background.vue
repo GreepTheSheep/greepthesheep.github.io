@@ -14,7 +14,7 @@ export default {
             STAR_SIZE: 3,
             STAR_MIN_SCALE: 0.2,
             OVERFLOW_THRESHOLD: 50,
-            STAR_SPEED: 35,  // higher = less speed
+            STAR_SPEED: 100,  // higher = less speed
             STAR_COUNT: ( window.innerWidth + window.innerHeight ) / 24,
 
             canvas: null,
