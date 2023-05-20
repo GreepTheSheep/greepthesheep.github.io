@@ -49,6 +49,7 @@ export default {
         },
         toggleStars() {
             this.showStars = !this.showStars;
+            console.log("starsSwitch", this.showStars);
             this.$ls.set("stars", this.showStars);
         },
         setDarkMode(mode = this.isDarkMode) {
