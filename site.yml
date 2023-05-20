@@ -1,3 +1,10 @@
 name: Greep
 description:
 avatar: https://raw.githubusercontent.com/GreepTheSheep/greepthesheep.github.io/master/images/icon.png
+
+socials:
+  github: GreepTheSheep
+  twitter: GreepTheSheep
+  mastodon:
+    username: "@greep"
+    url: https://trackmania.social/

@@ -1,5 +1,14 @@
 <script>
+import ShowcaseList from '../components/ShowcaseList.vue';
+
 export default {
+    data() {
+        return {
+            site: SITE_CONF, // eslint-disable-line no-undef
+            data: SITE_DATA // eslint-disable-line no-undef
+        };
+    },
+    components: { ShowcaseList }
 }
 </script>
 
@@ -7,23 +16,25 @@ export default {
     <h2 class="has-text-centered is-size-3 pb-6 headerA poppins">
         Hello!<br />
         My name is Matthieu<br />
-        or <span class="name">Greep</span>.
+        or <span class="name">{{ site.name }}</span>.
     </h2>
 
     <div class="py-6 has-text-centered divsociallinks">
-        <a href="https://github.com/{{ site.footer-links.github }}" target="_blank" class="sociallink">
+        <a :href="'https://github.com/'+site.socials.github" target="_blank" class="sociallink">
             <i class="fa fa-github" />
             <span> Github</span>
         </a>
-        <a href="https://twitter.com/{{ site.footer-links.twitter }}" target="_blank" class="sociallink">
+        <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank" class="sociallink">
             <i class="fa fa-twitter" />
             <span> Twitter</span>
         </a>
-        <a rel="me" href="https://trackmania.social/@greep" target="_blank" class="sociallink">
+        <a rel="me" :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
             <i class="fa fa-mastodon" />
             <span> Mastodon</span>
         </a>
     </div>
+
+    <ShowcaseList :showcases="data.homeShowcase" />
 
 </template>
 
