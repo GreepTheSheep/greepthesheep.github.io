@@ -212,7 +212,7 @@ canvas {
     position: fixed;
     width: 100%;
     height: 100%;
-    transition: background 1s, background-image 1s, background-color 1s;
+    transition: background 1s, background-image 1s, background-color 1s, background-blend-mode 1s;
 }
 
 body canvas {

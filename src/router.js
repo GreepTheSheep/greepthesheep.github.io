@@ -8,6 +8,11 @@ const router = createRouter({
             name: 'home',
             component: () => import('./views/HomeView.vue')
         },
+        {
+            path: '/tm',
+            name: 'Trackmania Projects',
+            component: () => import('./views/TrackmaniaView.vue')
+        },
     ]
 })
 
