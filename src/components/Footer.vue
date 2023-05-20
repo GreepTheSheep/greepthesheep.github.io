@@ -4,6 +4,9 @@ export default {
         isDarkMode: {
             type: Boolean
         },
+        showStars: {
+            type: Boolean
+        },
     },
     data() {
         return {
@@ -25,6 +28,11 @@ export default {
         <a :class="isDarkMode ? 'has-text-white' : 'has-text-black'" @click="$emit('darkModeBtnClicked');">
             <i class="fa fa-moon" aria-hidden="true" v-if="!isDarkMode" />
             <i class="fa fa-sun" aria-hidden="true" v-if="isDarkMode" />
+        </a>
+        &thinsp;
+        <a :class="isDarkMode ? 'has-text-white' : 'has-text-black'" @click="$emit('starsBtnClicked');">
+            <i class="fa fa-star-o" aria-hidden="true" v-if="!showStars" />
+            <i class="fa fa-star" aria-hidden="true" v-if="showStars" />
         </a>
     </div>
 </template>

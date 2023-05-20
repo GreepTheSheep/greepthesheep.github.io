@@ -4,6 +4,9 @@ export default {
         isDarkMode: {
             type: Boolean
         },
+        showStars: {
+            type: Boolean
+        }
     },
     data() {
         return {
@@ -131,9 +134,13 @@ export default {
             } );
         },
         step() {
-            this.context.clearRect(0, 0, this.width, this.height);
-            this.update();
-            this.render();
+            if (this.showStars) {
+                this.context.clearRect(0, 0, this.width, this.height);
+                this.update();
+                this.render();
+            } else {
+                this.context.clearRect(0, 0, this.width, this.height);
+            }
             requestAnimationFrame(this.step);
         },
         resize() {

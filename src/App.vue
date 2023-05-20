@@ -16,6 +16,7 @@ export default {
             site: SITE_CONF, // eslint-disable-line no-undef
             isDarkMode: Boolean(this.$ls.get('dark-mode') | window.matchMedia('(prefers-color-scheme: dark)').matches),
             isOnMobile: document.body.clientWidth < 768,
+            showStars: this.$ls.get('stars')
         }
     },
     mounted() {
@@ -34,12 +35,21 @@ export default {
                 this.$ls.set("dark-mode", event.matches);
                 this.setDarkMode();
             });
+        if (this.$ls.get('stars') == null) {
+            this.showStars = true;
+            this.$ls.set('stars', this.showStars);
+        }
+        console.log("stars?", this.$ls.get('stars'));
     },
     methods: {
         toggleDarkMode() {
             this.isDarkMode = !this.isDarkMode;
             this.$ls.set("dark-mode", this.isDarkMode);
             this.setDarkMode();
+        },
+        toggleStars() {
+            this.showStars = !this.showStars;
+            this.$ls.set("stars", this.showStars);
         },
         setDarkMode(mode = this.isDarkMode) {
             if (import.meta.env.DEV) console.log("darkModeSwitch", mode);
@@ -53,7 +63,7 @@ export default {
 </script>
 
 <template>
-    <BackgroundComponent :isDarkMode="isDarkMode" />
+    <BackgroundComponent :showStars="showStars" :isDarkMode="isDarkMode" />
     <div class="wrapper-masthead">
         <header class="container">
             <HeaderComponent />
@@ -64,7 +74,7 @@ export default {
     </main>
     <footer class="footer">
         <div class="container mt-5">
-            <FooterComponent :isDarkMode="isDarkMode" @darkModeBtnClicked="toggleDarkMode" />
+            <FooterComponent :isDarkMode="isDarkMode" :showStars="showStars" @darkModeBtnClicked="toggleDarkMode" @starsBtnClicked="toggleStars"/>
         </div>
     </footer>
 </template>
