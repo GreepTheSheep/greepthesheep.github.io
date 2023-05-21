@@ -2,8 +2,3 @@
   link: /#/tm
   description: I've done some works with Trackmania, I've made a few plugins and extensions for Trackmania with Openplanet, and some libraries with Trackmania.io.
   image: tm.png
-
-- name: Frames In Order (beta)
-  url: /#/frames
-  description: This project created for fun is to be able to send each image of a movie/episode of a series on Twitter.
-  image: frames.png
