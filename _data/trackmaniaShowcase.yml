@@ -1,0 +1,29 @@
+- name: node-Trackmania.io
+  link: https://tmio.greep.fr/
+  description: node-trackmania.io is an API wrapper for the website Trackmania.io, it retuns all the useful informations from the Trackmania API for your Node.js projects
+  image: tmio.png
+
+- name: ManiaExchange Randomizer
+  link: https://openplanet.dev/plugin/mxrandom
+  description: An Openplanet plugin used extensively during the FlinkTM Random Map Challenge. The goal is to take a random map of the Trackmania game from the TrackmaniaExchange site and play it directly in the game.
+  image: tmx_rand.png
+
+- name: ManiaExchange Menu
+  link: https://openplanet.dev/plugin/maniaexchange
+  description: An Openplanet plugin that displays all the maps from the ManiaExchange network.
+  image: tmx_op.png
+
+- name: Speedrun tool
+  link: https://openplanet.dev/plugin/speedrun
+  description: A Speedrun Tool for Trackmania 2020
+  image: tmSpeedruns.png
+
+- name: Cup Of Another Day
+  link: https://coad.greep.fr
+  description: A Knockout competiton on random Tracks Of The Day. Every Tuesdays at 20:00 CEST
+  image: coad.png
+
+- name: Open FlagRush Cup
+  link: https://liquipedia.net/trackmania/FlagRush_Anniversary_Cup
+  description: A Cup on the FlagRush Gamemode, grab the flag with your team and score it to oppenent's base!
+  image: TMFlagRush.png
