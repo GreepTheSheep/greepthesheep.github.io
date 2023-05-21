@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             site: SITE_CONF, // eslint-disable-line no-undef
-            isDarkMode: Boolean(this.$ls.get('dark-mode') | window.matchMedia('(prefers-color-scheme: dark)').matches),
+            isDarkMode: this.$ls.get('dark-mode'),
             isOnMobile: document.body.clientWidth < 768,
             showStars: this.$ls.get('stars')
         }
@@ -28,6 +28,11 @@ export default {
         }
         link.href = this.site.avatar;
         console.log("is dev mode?", import.meta.env.DEV);
+
+        if (this.$ls.get('dark-mode') == null) {
+            this.$ls.set('dark-mode', window.matchMedia('(prefers-color-scheme: dark)').matches);
+            this.isDarkMode = this.$ls.get('dark-mode');
+        }
         this.setDarkMode();
         window.matchMedia('(prefers-color-scheme: dark)')
             .addEventListener('change', event => {
@@ -35,6 +40,7 @@ export default {
                 this.$ls.set("dark-mode", event.matches);
                 this.setDarkMode();
             });
+
         if (this.$ls.get('stars') == null) {
             this.showStars = true;
             this.$ls.set('stars', this.showStars);
@@ -49,7 +55,7 @@ export default {
         },
         toggleStars() {
             this.showStars = !this.showStars;
-            console.log("starsSwitch", this.showStars);
+            if (import.meta.env.DEV) console.log("starsSwitch", this.showStars);
             this.$ls.set("stars", this.showStars);
         },
         setDarkMode(mode = this.isDarkMode) {
@@ -83,5 +89,9 @@ export default {
 <style scoped>
 .wrapper-masthead {
     margin-bottom: 50px;
+}
+
+.footer {
+    padding: 0 !important;
 }
 </style>
