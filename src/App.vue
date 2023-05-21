@@ -71,7 +71,7 @@ export default {
         </header>
     </div>
     <main class="container">
-        <RouterView />
+        <RouterView :isDarkMode="isDarkMode" />
     </main>
     <footer class="footer">
         <div class="container mt-5">
