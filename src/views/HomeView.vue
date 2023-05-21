@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <h2 class="has-text-centered is-size-3 pb-6 headerA poppins">
+    <h2 class="has-text-centered is-size-3 headerA poppins">
         Hello!<br />
         My name is Matthieu<br />
         or <span class="name">{{ site.name }}</span>.
@@ -49,6 +49,17 @@ export default {
 }
 @keyframes nameAnim {
     0% {
+        color: darkgreen;
+    }
+    50% {
+        color: seagreen;
+    }
+    100% {
+        color: darkgreen;
+    }
+}
+@keyframes nameAnimDarkmode {
+    0% {
         color: chartreuse;
     }
     50% {
@@ -67,20 +78,23 @@ export default {
     font-weight: bold;
 }
 .name {
+    color: darkgreen;
+    animation: nameAnim 5s infinite;
+    animation-delay: 2s;
+}
+body.darkmode .name {
     color: chartreuse;
-    animation: nameAnim 6s infinite;
+    animation: nameAnimDarkmode 5s infinite;
     animation-delay: 2s;
 }
 .divsociallinks a {
     margin-right: 30px;
 }
 .sociallink {
-    color: lightgreen !important;
+    color: darkgreen !important;
     font-size: larger;
 }
-@media screen and (prefers-color-scheme: light) {
-    .sociallink {
-        color: darkgreen !important;
-    }
+body.darkmode .sociallink {
+    color: lightgreen !important;
 }
 </style>
