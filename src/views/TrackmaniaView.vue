@@ -19,7 +19,7 @@ export default {
             },
             backgroundAlpha: 0.65,
             bgColorModeInterval: null,
-            bgIntervalDelay: 7000,
+            bgIntervalDelay: 20,
             bgIntervalTimer: 0,
             bgIntervalDivWidth: 0,
             bgInterval: null,
@@ -35,7 +35,7 @@ export default {
             this.backgroundAlpha = this.isDarkMode ? 0.65 : 0;
             document.querySelector("div#app>canvas").style.backgroundColor = "rgba(0, 0, 0, " + this.backgroundAlpha + ")";
         }, 0);
-        this.bgInterval = setInterval(this.backgroundImageInterval, 0);
+        this.bgInterval = setInterval(this.backgroundImageInterval, 1000);
     },
     methods: {
         async fetchBackgroundImage() {
