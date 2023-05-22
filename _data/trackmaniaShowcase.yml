@@ -3,9 +3,14 @@
   description: node-trackmania.io is an API wrapper for the website Trackmania.io, it retuns all the useful informations from the Trackmania API for your Node.js projects
   image: tmio.png
 
+- name: Trackmania.io Discord bot
+  link: https://discord.com/oauth2/authorize?client_id=810191349214871583&permissions=397888841808&scope=bot%20applications.commands
+  description: A Discord bot that interacts with the Trackmania.io API
+  image: tmio.png
+
 - name: ManiaExchange Randomizer
   link: https://openplanet.dev/plugin/mxrandom
-  description: An Openplanet plugin used extensively during the FlinkTM Random Map Challenge. The goal is to take a random map of the Trackmania game from the TrackmaniaExchange site and play it directly in the game.
+  description: An Openplanet plugin used extensively during the Flink's Random Map Challenge. The goal is to take a random map of the Trackmania game from the TrackmaniaExchange site and play it directly in the game.
   image: tmx_rand.png
 
 - name: ManiaExchange Menu
