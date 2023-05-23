@@ -1,4 +1,14 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+const redirects = SITE_DATA.redirectLinks.map(l=>{ // eslint-disable-line no-undef
+    return {
+        path: l.path,
+        name: l.path.substring(1),
+        redirect: "",
+        beforeEnter() {
+            window.location.href = l.url;
+        }
+    }
+});
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -13,6 +23,12 @@ const router = createRouter({
             name: 'Trackmania Projects',
             component: () => import('./views/TrackmaniaView.vue')
         },
+        {
+            path: '/contact',
+            name: 'Contact',
+            component: () => import('./views/ContactView.vue')
+        },
+        ...redirects
     ]
 })
 
