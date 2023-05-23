@@ -4,7 +4,7 @@
   image: tmio.png
 
 - name: Trackmania.io Discord bot
-  link: https://discord.com/oauth2/authorize?client_id=810191349214871583&permissions=397888841808&scope=bot%20applications.commands
+  link: https://tmio.greep.fr/#/discord-bot
   description: A Discord bot that interacts with the Trackmania.io API
   image: tmio.png
 
