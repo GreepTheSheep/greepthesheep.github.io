@@ -1,10 +1,9 @@
 <script>
-import { RouterView } from 'vue-router'
 import BackgroundComponent from './components/Background.vue';
 import HeaderComponent from './components/Header.vue';
 import FooterComponent from './components/Footer.vue';
 export default {
-    components: { RouterView, BackgroundComponent, HeaderComponent, FooterComponent },
+    components: { BackgroundComponent, HeaderComponent, FooterComponent },
     updated() {
         if (this.$route.path != "/" && this.$route.name != undefined)
             window.document.title = this.$route.name + " - " + this.site.name;
@@ -77,7 +76,11 @@ export default {
         </header>
     </div>
     <main class="container">
-        <RouterView :isDarkMode="isDarkMode" />
+        <router-view v-slot="{ Component, route }">
+            <transition :name="route.meta.transition || 'fade'">
+                <component :is="Component" :key="route.path" :isDarkMode="isDarkMode" />
+            </transition>
+        </router-view>
     </main>
     <footer class="footer">
         <div class="container mt-5">
