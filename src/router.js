@@ -2,8 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const redirects = SITE_DATA.redirectLinks.map(l=>{ // eslint-disable-line no-undef
     return {
         path: l.path,
-        name: l.path.substring(1),
-        redirect: "",
+        name: "Redirecting... - " + l.path.substring(1),
+        component: () => import('./views/RedirectView.vue'),
         beforeEnter() {
             window.location.href = l.url;
         }
