@@ -2,7 +2,15 @@
 export default {
     data() {
         return {
-            mail: "greep@greep.fr"
+            mail: "greep@greep.fr",
+            copyText: "Copy"
+        }
+    },
+    methods: {
+        copyToClipboard(content) {
+            navigator.clipboard.writeText(content);
+            this.copyText = "Copied!";
+            setTimeout(()=>{this.copyText = "Copy"}, 2400);
         }
     }
 }
@@ -15,6 +23,8 @@ export default {
             &nbsp;
             <span>{{ mail }}</span>
         </a>
+        &nbsp;
+        <button @click="copyToClipboard(mail)" class="button is-primary is-size-5">{{ copyText }}</button>
     </div>
     <div class="block is-size-3 has-text-centered">
         <router-link to="/discord">
