@@ -1,5 +1,6 @@
 <script>
 import ShowcaseList from '../components/ShowcaseList.vue';
+import SponsorList from '../components/SponsorList.vue';
 
 export default {
     data() {
@@ -8,7 +9,7 @@ export default {
             data: SITE_DATA // eslint-disable-line no-undef
         };
     },
-    components: { ShowcaseList }
+    components: { ShowcaseList, SponsorList }
 }
 </script>
 
@@ -35,6 +36,8 @@ export default {
     </div>
 
     <ShowcaseList :showcases="data.homeShowcase" />
+
+    <SponsorList />
 
 </template>
 
