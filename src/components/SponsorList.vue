@@ -47,7 +47,7 @@ export default {
             return await res.json();
         },
         chunkSponsors() {
-            const chunkSize = 4;
+            const chunkSize = 12/2;
             for (let i = 0; i < this.sponsorsCached.length; i += chunkSize) {
                 const chunk = this.sponsorsCached.slice(i, i + chunkSize);
                 this.sponsorsChunks.push(chunk);
@@ -62,7 +62,11 @@ export default {
         <h2 class="is-size-4 pb-4">They sponsor me:</h2>
         <div class="columns is-desktop" v-for="chunk in sponsorsChunks" v-bind:key="chunk[0].id">
             <div class="column is-2" v-for="sponsor in chunk" v-bind:key="sponsor.id">
-                <a :href="sponsor.html_url"><img class="image is-96x96 is-rounded" :src="sponsor.avatar_url" :alt="sponsor.login +' - ' + sponsor.name" width="100px"></a>
+                <figure class="image is-96x96">
+                    <a :href="sponsor.html_url" target="_blank">
+                        <img class="is-rounded" :src="sponsor.avatar_url" :alt="sponsor.login +' - ' + sponsor.name" width="100px">
+                    </a>
+                </figure>
             </div>
         </div>
     </div>
