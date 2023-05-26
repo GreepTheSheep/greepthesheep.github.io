@@ -59,7 +59,22 @@ export default {
 
 <template>
     <div class="sponsors" v-if="sponsorsCached != null && sponsorsCached.length > 0">
-        <h2 class="is-size-4 pb-4">They sponsor me:</h2>
+        <div class="columns">
+            <div class="column has-text-left">
+                <h2 class="is-size-4 pb-4">They sponsor me:</h2>
+            </div>
+            <div class="column has-text-right">
+                <h2 class="is-size-4 pb-4">
+                    <router-link to="/sponsor">
+                        <button class="button is-danger has-text-white">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            &nbsp;
+                            Become a sponsor
+                        </button>
+                    </router-link>
+                </h2>
+            </div>
+        </div>
         <div class="columns is-desktop" v-for="chunk in sponsorsChunks" v-bind:key="chunk[0].id">
             <div class="column is-2" v-for="sponsor in chunk" v-bind:key="sponsor.id">
                 <figure class="image is-96x96">
