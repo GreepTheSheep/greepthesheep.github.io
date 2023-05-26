@@ -59,12 +59,12 @@ export default {
 
 <template>
     <div class="sponsors" v-if="sponsorsCached != null && sponsorsCached.length > 0">
-        <div class="columns">
+        <div class="columns pb-4">
             <div class="column has-text-left">
-                <h2 class="is-size-4 pb-4">They sponsor me:</h2>
+                <h2 class="is-size-4">They sponsor me:</h2>
             </div>
             <div class="column has-text-right">
-                <h2 class="is-size-4 pb-4">
+                <h2 class="is-size-4">
                     <router-link to="/sponsor">
                         <button class="button is-danger has-text-white">
                             <i class="fa fa-heart" aria-hidden="true"></i>
