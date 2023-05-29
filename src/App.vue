@@ -5,7 +5,7 @@ import FooterComponent from './components/Footer.vue';
 export default {
     components: { BackgroundComponent, HeaderComponent, FooterComponent },
     updated() {
-        if (this.$route.path != "/" && this.$route.name != undefined)
+        if (this.$route.path != "/" || this.$route.name != undefined)
             window.document.title = this.$route.name + " - " + this.site.name;
         else
             window.document.title = this.site.name;
