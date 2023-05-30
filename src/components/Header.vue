@@ -20,6 +20,10 @@ export default {
         <nav>
             <router-link to="/">Home</router-link>
             <router-link to="/contact">Contact</router-link>
+            <a :href="'https://patreon.com/'+site.socials.patreon" target="_blank">
+                <i class="fa fa-patreon" aria-hidden="true"></i>
+                Patreon
+            </a>
         </nav>
     </div>
 </template>
