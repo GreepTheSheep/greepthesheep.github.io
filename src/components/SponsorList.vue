@@ -39,12 +39,12 @@ export default {
                 </h2>
             </div>
         </div>
-        <div class="columns is-desktop" v-for="chunk in sponsorsChunks" v-bind:key="chunk[0].id">
-            <div class="column is-2" v-for="sponsor in chunk" v-bind:key="sponsor.id">
+        <div class="columns is-centered" v-for="chunk in sponsorsChunks" v-bind:key="chunk[0].name">
+            <div class="column is-2 has-text-centered" v-for="sponsor in chunk" v-bind:key="sponsor.name">
                 <figure class="image is-96x96">
-                    <a :href="sponsor.html_url" target="_blank">
-                        <img class="is-rounded" :src="sponsor.avatar_url" :alt="sponsor.login +' - ' + sponsor.name" width="100px">
-                    </a>
+                    <img class="is-rounded" :src="sponsor.avatar" :alt="sponsor.name" width="100px" v-if="sponsor.avatar">
+                    <img class="is-rounded" src="/img/unknown-person.jpg" :alt="sponsor.name" width="100px" v-else>
+                    <span v-if="sponsor.name">{{ sponsor.name }}</span>
                 </figure>
             </div>
         </div>
