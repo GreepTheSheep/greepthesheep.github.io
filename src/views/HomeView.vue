@@ -35,6 +35,9 @@ export default {
         </a>
     </div>
 
+    <h3 class="is-size-4">
+        My works:
+    </h3>
     <ShowcaseList :showcases="data.homeShowcase" />
 
     <SponsorList />
