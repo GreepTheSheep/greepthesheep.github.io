@@ -18,7 +18,7 @@ export default {
                 "author": "Sláys & htimh"
             },
             backgroundAlpha: 0.65,
-            bgColorModeInterval: null,
+            colorModeInterval: null,
             bgIntervalDelay: 20,
             bgIntervalTimer: 0,
             bgIntervalDivWidth: 0,
@@ -31,9 +31,10 @@ export default {
             this.fetchBackgroundImage();
         else
             this.setBackgroundImage();
-        this.bgColorModeInterval = setInterval(() => {
-            this.backgroundAlpha = this.isDarkMode ? 0.65 : 0;
-            document.querySelector("div#app>canvas").style.backgroundColor = "rgba(0, 0, 0, " + this.backgroundAlpha + ")";
+        this.colorModeInterval = setInterval(() => {
+            let classList = document.querySelector("#app").classList;
+            if (!this.isDarkMode && !classList.contains('has-text-white')) classList.add('has-text-white');
+            if (this.isDarkMode && classList.contains('has-text-white')) classList.remove('has-text-white');
         }, 0);
         this.bgInterval = setInterval(this.backgroundImageInterval, 1000);
     },
@@ -84,8 +85,10 @@ export default {
         }
     },
     unmounted() {
-        clearInterval(this.bgColorModeInterval);
+        clearInterval(this.colorModeInterval);
         clearInterval(this.bgInterval);
+        let classList = document.querySelector("#app").classList;
+        if (this.isDarkMode && classList.contains('has-text-white')) classList.remove('has-text-white');
         this.removeBackgroundImage();
     },
     components: { ShowcaseList }
