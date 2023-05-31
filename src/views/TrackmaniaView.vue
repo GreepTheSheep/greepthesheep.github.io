@@ -13,7 +13,7 @@ export default {
             mapBackground: null,
             mapBackgroundFallback: {
                 "mxID": 36270,
-                "url": "https://i.imgur.com/f7J7XxF.webp",
+                "url": "/img/opuntia.webp",
                 "name": "Opuntia",
                 "author": "Sláys & htimh"
             },
@@ -44,6 +44,7 @@ export default {
             let res = await fetch("/api/trackmaniabackgrounds.json");
             if (!res.ok) {
                 console.error("Error while fecthing backgrounds from API:", res.status, res.statusText);
+                this.mapBackground = null;
                 return this.setBackgroundImage();
             }
             let json = await res.json(), game = Object.keys(json), selectedGame = this.randomItem(game), selectedMap = this.randomItem(json[selectedGame]);
@@ -99,6 +100,10 @@ export default {
         <i class="fa fa-map" aria-hidden="true" />&thinsp;
         {{ mapBackground.name }} by {{ mapBackground.author }}
         <div class="progress-circle" @click="fetchBackgroundImage" />
+    </div>
+    <div class="bgImage-desc is-size-6 has-text-centered" v-else>
+        <i class="fa fa-map" aria-hidden="true" />&thinsp;
+        {{ mapBackgroundFallback.name }} by {{ mapBackgroundFallback.author }}
     </div>
 </template>
 
