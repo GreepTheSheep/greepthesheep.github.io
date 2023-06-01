@@ -42,17 +42,29 @@ export default {
         async fetchBackgroundImage() {
             this.bgIntervalTimer = 0;
             this.bgIntervalDivDirectionFw = !this.bgIntervalDivDirectionFw;
-            let res = await fetch("/api/trackmaniabackgrounds.json");
-            if (!res.ok) {
-                console.error("Error while fecthing backgrounds from API:", res.status, res.statusText);
+            try {
+                let res = await fetch("/api/trackmaniabackgrounds.json");
+                if (!res || !res.ok) {
+                    console.error("Error while fecthing backgrounds from API:", res.status, res.statusText);
+                    this.mapBackground = null;
+                    return this.setBackgroundImage();
+                }
+                let json = await res.json(), game = Object.keys(json), selectedGame = this.randomItem(game), selectedMap = this.randomItem(json[selectedGame]);
+                while (this.mapBackground != null && selectedMap.mxID == this.mapBackground.mxID)
+                    selectedMap = this.randomItem(json[selectedGame]); // not taking the same map
+                // test background url by fetching
+                let bgRes = await fetch(selectedMap.url);
+                if (!bgRes || !bgRes.ok) {
+                    console.error("Error while fecthing background URL:", res.status, res.statusText);
+                    this.mapBackground = null;
+                    return this.setBackgroundImage();
+                }
+                this.mapBackground = selectedMap;
+                this.setBackgroundImage(this.mapBackground);
+            } catch (err) {
                 this.mapBackground = null;
                 return this.setBackgroundImage();
             }
-            let json = await res.json(), game = Object.keys(json), selectedGame = this.randomItem(game), selectedMap = this.randomItem(json[selectedGame]);
-            while (this.mapBackground != null && selectedMap.mxID == this.mapBackground.mxID)
-                selectedMap = this.randomItem(json[selectedGame]); // not taking the same map
-            this.mapBackground = selectedMap;
-            this.setBackgroundImage(this.mapBackground);
         },
         backgroundImageInterval() {
             if (this.bgIntervalTimer < this.bgIntervalDelay) {
