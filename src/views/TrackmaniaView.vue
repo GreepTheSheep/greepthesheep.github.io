@@ -9,6 +9,7 @@ export default {
     },
     data() {
         return {
+            wasInDarkMode: this.isDarkMode,
             data: SITE_DATA, // eslint-disable-line no-undef
             mapBackground: null,
             mapBackgroundFallback: {
@@ -32,9 +33,7 @@ export default {
         else
             this.setBackgroundImage();
         this.colorModeInterval = setInterval(() => {
-            let classList = document.querySelector("#app").classList;
-            if (!this.isDarkMode && !classList.contains('has-text-white')) classList.add('has-text-white');
-            if (this.isDarkMode && classList.contains('has-text-white')) classList.remove('has-text-white');
+            if (!this.isDarkMode) this.$emit('toggleDarkMode');
         }, 0);
         this.bgInterval = setInterval(this.backgroundImageInterval, 1000);
     },
@@ -99,8 +98,7 @@ export default {
     unmounted() {
         clearInterval(this.colorModeInterval);
         clearInterval(this.bgInterval);
-        let classList = document.querySelector("#app").classList;
-        if (this.isDarkMode && classList.contains('has-text-white')) classList.remove('has-text-white');
+        if (!this.wasInDarkMode) this.$emit('toggleDarkMode');
         this.removeBackgroundImage();
     },
     components: { ShowcaseList }
