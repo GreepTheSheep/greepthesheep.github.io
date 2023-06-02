@@ -1,5 +1,5 @@
 - name: Trackmania projects
-  link: /#/tm
+  link: /tm
   description: I've done some works with Trackmania, I've made a few plugins and extensions for Trackmania with Openplanet, and some libraries with Trackmania.io.
   image: tm.png
 
