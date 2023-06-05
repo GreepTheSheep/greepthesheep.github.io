@@ -11,10 +11,12 @@ export default {
     },
     methods: {
         chunkSponsors() {
-            const chunkSize = 12/2;
-            for (let i = 0; i < this.sponsorsData.length; i += chunkSize) {
-                const chunk = this.sponsorsData.slice(i, i + chunkSize);
-                this.sponsorsChunks.push(chunk);
+            if (this.sponsorsData && this.sponsorsData.length > 0) {
+                const chunkSize = 12/2;
+                for (let i = 0; i < this.sponsorsData.length; i += chunkSize) {
+                    const chunk = this.sponsorsData.slice(i, i + chunkSize);
+                    this.sponsorsChunks.push(chunk);
+                }
             }
         }
     }
@@ -22,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <div class="sponsors is-desktop pb-6" v-if="sponsorsData.length > 0">
+    <div class="sponsors is-desktop pb-6" v-if="sponsorsData && sponsorsData.length > 0">
         <div class="columns pb-4">
             <div class="column has-text-left">
                 <h2 class="is-size-4">They support me:</h2>
