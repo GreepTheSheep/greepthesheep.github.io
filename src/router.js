@@ -28,7 +28,12 @@ const router = createRouter({
             name: 'Links & Contact',
             component: () => import('./views/LinksView.vue')
         },
-        ...redirects
+        ...redirects,
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'Not Found',
+            component: () => import('./views/NotFoundView.vue')
+        }
     ]
 })
 
