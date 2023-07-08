@@ -24,9 +24,9 @@ const router = createRouter({
             component: () => import('./views/TrackmaniaView.vue')
         },
         {
-            path: '/contact',
-            name: 'Contact',
-            component: () => import('./views/ContactView.vue')
+            path: '/links',
+            name: 'Links & Contact',
+            component: () => import('./views/LinksView.vue')
         },
         ...redirects
     ]
