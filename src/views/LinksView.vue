@@ -34,18 +34,18 @@ export default {
                         <span>Discord server</span>
                 </button>
             </router-link>
+            <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank">
+                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        &ensp;
+                        <span>X (Twitter)</span>
+                </button>
+            </a>
             <a rel="me" :href="'https://threads.net/@'+site.socials.threads" target="_blank">
                 <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
                         <i class="fa fa-at" aria-hidden="true"></i>
                         &ensp;
                         <span>Threads</span>
-                </button>
-            </a>
-            <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank">
-                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        &ensp;
-                        <span>Twitter</span>
                 </button>
             </a>
             <a :href="'https://instagram.com/'+site.socials.threads" target="_blank">
