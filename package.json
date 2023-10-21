@@ -19,7 +19,7 @@
     "eslint-plugin-vue": "^9.9.0",
     "fork-awesome": "^1.2.0",
     "js-yaml": "^4.1.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.31",
     "vite": "^4.1.4",
     "vite-plugin-pwa": "^0.14.7",
     "vue-ls": "^4.2.0"
