@@ -3,3 +3,6 @@
 
 - path: /patreon
   url: https://www.patreon.com/Greep
+
+- path: /sponsor
+  url: https://github.com/sponsors/GreepTheSheep
