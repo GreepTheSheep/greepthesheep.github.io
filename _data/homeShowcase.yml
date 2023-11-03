@@ -2,13 +2,3 @@
   link: /tm
   description: I've done some works with Trackmania, I've made a few plugins and extensions for Trackmania with Openplanet, and some libraries with Trackmania.io.
   image: tm.png
-
-- name: HaveIBeenPwned CLI
-  link: https://github.com/GreepTheSheep/HaveIBeenPwned-cli
-  description: This CLI utility will create a .csv file listing all breaches for a list of mail addresses.
-  image: HaveIBeenPwned.png
-
-- name: Android Messages Desktop
-  link: https://github.com/GreepTheSheep/android-messages-desktop
-  description: Inspired by WhatsApp for Desktop. An Electron app that uses Android Messages on your computer.
-  image: android-messages.png

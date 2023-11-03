@@ -3,6 +3,11 @@
   description: node-trackmania.io is an API wrapper for the website Trackmania.io, it retuns all the useful informations from the Trackmania API for your Node.js projects
   image: tmio.png
 
+- name: Trackmania Essentials for Node
+  link: https://github.com/GreepTheSheep/node-tm-essentials
+  description: A lightweight library in Node.js that provides formatting features and little additions for any development related to Trackmania.
+  image: tm.png
+
 - name: Trackmania.io Discord bot
   link: https://tmio.greep.fr/#/discord-bot
   description: A Discord bot that interacts with the Trackmania.io API
