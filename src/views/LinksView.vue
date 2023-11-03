@@ -34,18 +34,37 @@ export default {
                         <span>Discord server</span>
                 </button>
             </router-link>
-            <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank">
+            <a :href="'https://youtube.com/@'+site.socials.youtube" target="_blank">
                 <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
                         &ensp;
-                        <span>X (Twitter)</span>
+                        <span>Youtube</span>
                 </button>
             </a>
-            <a rel="me" :href="'https://threads.net/@'+site.socials.threads" target="_blank">
+            <a :href="'https://twitch.tv/'+site.socials.twitch" target="_blank">
                 <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-at" aria-hidden="true"></i>
+                        <i class="fa fa-twitch" aria-hidden="true"></i>
                         &ensp;
-                        <span>Threads</span>
+                        <span>Twitch</span>
+                </button>
+            </a>
+            <a :href="'https://linkedin.com/in/'+site.socials.linkedin" target="_blank">
+                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        &ensp;
+                        <span>Linkedin</span>
+                </button>
+            </a>
+            <a :href="'https://github.com/'+site.socials.github" target="_blank">
+                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        &ensp;
+                        <span>Github</span>
+                </button>
+            </a>
+            <a :href="'https://x.com/'+site.socials.twitter" target="_blank">
+                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
+                        <span>𝕏 (Twitter)</span>
                 </button>
             </a>
             <a :href="'https://instagram.com/'+site.socials.threads" target="_blank">
@@ -62,36 +81,11 @@ export default {
                         <span>Mastodon</span>
                 </button>
             </a>
-            <a :href="'https://youtube.com/@'+site.socials.youtube" target="_blank">
+            <a rel="me" :href="'https://threads.net/@'+site.socials.threads" target="_blank">
                 <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <i class="fa fa-at" aria-hidden="true"></i>
                         &ensp;
-                        <span>Youtube</span>
-                </button>
-            </a>
-        </div>
-
-        <h3 class="is-size-4 mb-5"><strong>Other</strong></h3>
-        <div class="buttons">
-            <a :href="'https://twitch.tv/'+site.socials.twitch" target="_blank">
-                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-twitch" aria-hidden="true"></i>
-                        &ensp;
-                        <span>Twitch</span>
-                </button>
-            </a>
-            <a :href="'https://github.com/'+site.socials.github" target="_blank">
-                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                        &ensp;
-                        <span>Github</span>
-                </button>
-            </a>
-            <a :href="'https://linkedin.com/in/'+site.socials.linkedin" target="_blank">
-                <button class="button mb-4 is-medium is-outlined is-link is-inverted is-rounded">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        &ensp;
-                        <span>Linkedin</span>
+                        <span>Threads</span>
                 </button>
             </a>
             <a :href="'https://patreon.com/'+site.socials.patreon" target="_blank">
