@@ -25,14 +25,17 @@ export default {
             <i class="fa fa-github" />
             <span> Github</span>
         </a>
-        <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank" class="sociallink">
-            <i class="fa fa-twitter" />
-            <span> Twitter</span>
+        <a :href="'https://x.com/'+site.socials.twitter" target="_blank" class="sociallink">
+            <span>𝕏 (Twitter)</span>
         </a>
-        <a rel="me" :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
+        <a :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
             <i class="fa fa-mastodon" />
             <span> Mastodon</span>
         </a>
+        <router-link to="/discord" target="_blank" class="sociallink">
+            <i class="fa fa-discord-alt" />
+            <span> Discord server</span>
+        </router-link>
     </div>
 
     <h3 class="is-size-4">
