@@ -25,8 +25,8 @@ export default {
             <i class="fa fa-github" />
         </a>
         &nbsp;
-        <a :href="'https://twitter.com/'+site.socials.twitter" target="_blank" class="sociallink">
-            <i class="fa fa-twitter" />
+        <a :href="'https://x.com/'+site.socials.twitter" target="_blank" class="sociallink">
+            <span>𝕏</span>
         </a>
         &nbsp;
         <a rel="me" :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
