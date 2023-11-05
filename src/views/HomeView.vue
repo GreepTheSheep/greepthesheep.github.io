@@ -28,7 +28,7 @@ export default {
         <a :href="'https://x.com/'+site.socials.twitter" target="_blank" class="sociallink">
             <span>𝕏 (Twitter)</span>
         </a>
-        <a :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
+        <a rel="me" :href="site.socials.mastodon.url+site.socials.mastodon.username" target="_blank" class="sociallink">
             <i class="fa fa-mastodon" />
             <span> Mastodon</span>
         </a>
