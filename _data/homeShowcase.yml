@@ -2,3 +2,8 @@
   link: /tm
   description: I've done some works with Trackmania, I've made a few plugins and extensions for Trackmania with Openplanet, and some libraries with Trackmania.io.
   image: tm.png
+
+- name: Jellyfin for Node.js
+  link: https://jellyfin-node.greep.fr
+  description: The official Jellyfin SDK uses only TypeScript ES6 modules. So I wanted to port my own version of the SDK using only CommonJS modules, which is more easy to use for beginners.
+  image: jellyfin.png
