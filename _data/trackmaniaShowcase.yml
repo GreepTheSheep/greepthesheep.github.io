@@ -1,3 +1,8 @@
+- name: Random Map Challenge
+  link: /rmc
+  description: In collaboration with the youtuber Flink, the Random Map Challenge is a game mode in which you have to get as many track medals as possible in one hour on random maps.
+  image: RMC-logo.png
+
 - name: node-Trackmania.io
   link: https://tmio.greep.fr/
   description: node-trackmania.io is an API wrapper for the website Trackmania.io, it retuns all the useful informations from the Trackmania API for your Node.js projects
