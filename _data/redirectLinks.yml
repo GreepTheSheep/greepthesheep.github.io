@@ -9,6 +9,3 @@
 
 - path: /rmc
   url: https://flinkblog.de/RMC/
-
-- path: /rmcdev
-  url: https://flinkblog.de/RMC/dev
