@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            site: SITE_CONF, // eslint-disable-line no-undef
             sponsorsData: SITE_DATA.sponsors, // eslint-disable-line no-undef
             sponsorsChunks: []
         }
@@ -25,6 +26,7 @@ export default {
 
 <template>
     <div class="sponsors is-desktop pb-6" v-if="sponsorsData && sponsorsData.length > 0">
+        <hr />
         <div class="columns pb-4">
             <div class="column has-text-left">
                 <h2 class="is-size-4">They support me:</h2>
