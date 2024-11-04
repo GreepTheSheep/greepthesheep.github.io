@@ -28,6 +28,11 @@ const router = createRouter({
             name: 'Links & Contact',
             component: () => import('./views/LinksView.vue')
         },
+        {
+            path: '/about',
+            name: 'About',
+            component: () => import('./views/AboutView.vue')
+        },
         ...redirects,
         {
             path: '/:pathMatch(.*)*',

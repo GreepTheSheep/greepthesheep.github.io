@@ -36,6 +36,10 @@ export default {
         <a :href="'https://patreon.com/'+site.socials.patreon" target="_blank">
             <i class="fa fa-patreon" aria-hidden="true"></i>
         </a>
+        &nbsp;
+        <router-link to="/about">
+            <i class="fa fa-question" aria-hidden="true"></i>
+        </router-link>
     </div>
     <div class="is-size-6 has-text-centered">
         <a :class="isDarkMode ? 'has-text-white' : 'has-text-black'" @click="$emit('darkModeBtnClicked');">
