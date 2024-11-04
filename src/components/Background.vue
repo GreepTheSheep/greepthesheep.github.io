@@ -26,10 +26,12 @@ export default {
             pointerX: null,
             pointerY: null,
             velocity: { x: 0, y: 0, tx: 0, ty: 0, z: 0.000005 },
-            touchInput: false
+            touchInput: false,
+            screensaverMode: false
         }
     },
-    mounted() {
+    async mounted() {
+        await this.$router.isReady();
         this.canvas = document.querySelector('canvas');
         this.context = this.canvas.getContext('2d');
         this.generate();
@@ -38,10 +40,55 @@ export default {
 
         window.onresize = this.resize;
 
-        document.onmousemove = this.onMouseMove;
-        document.ontouchmove = this.onTouchMove;
-        document.ontouchend = this.onMouseLeave;
-        document.onmouseleave = this.onMouseLeave;
+        this.screensaverMode = ("screensaver" in this.$route.query && this.$route.query.screensaver == null) || Boolean(this.$route.query.screensaver) || false;
+        console.log("screensaver?", this.screensaverMode);
+
+        if (this.screensaverMode) {
+
+            // Position initiale du point
+            this.pointerX = this.canvas.width / 2;
+            this.pointerY = this.canvas.width / 2;
+            let x = this.canvas.width / 2;
+            let y = this.canvas.height / 2;
+
+            // Limites de déplacement
+            const xMin = 10;
+            const xMax = this.canvas.width - 10;
+            const yMin = 10;
+            const yMax = this.canvas.height - 10;
+
+            // Position initiale du point de la cible
+            let targetX = Math.floor(Math.random() * (xMax - xMin + 1)) + xMin;
+            let targetY = Math.floor(Math.random() * (yMax - yMin + 1)) + yMin;
+
+            // Vitesse de déplacement
+            const speed = 10;
+
+            setInterval(() => {
+                // Calculer la direction vers la cible
+                const dx = targetX - x;
+                const dy = targetY - y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                // Si la distance est petite, définir une nouvelle cible
+                if (distance < speed) {
+                    targetX = Math.floor(Math.random() * (xMax - xMin + 1)) + xMin;
+                    targetY = Math.floor(Math.random() * (yMax - yMin + 1)) + yMin;
+                    // console.log("new target:", targetX, targetY);
+                } else {
+                    // Déplacer le point progressivement vers la cible
+                    x += (dx / distance) * speed;
+                    y += (dy / distance) * speed;
+                }
+
+                this.movePointer( x, y );
+            }, 10);
+        } else {
+            document.onmousemove = this.onMouseMove;
+            document.ontouchmove = this.onTouchMove;
+            document.ontouchend = this.onMouseLeave;
+            document.onmouseleave = this.onMouseLeave;
+        }
     },
     methods: {
         generate() {

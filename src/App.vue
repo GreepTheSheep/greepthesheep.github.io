@@ -16,10 +16,12 @@ export default {
             site: SITE_CONF, // eslint-disable-line no-undef
             isDarkMode: this.$ls.get('dark-mode'),
             isOnMobile: document.body.clientWidth < 768,
-            showStars: this.$ls.get('stars')
+            showStars: this.$ls.get('stars'),
+            screensaverEnabled: false
         }
     },
-    mounted() {
+    async mounted() {
+        await this.$router.isReady();
         let link = document.querySelector("link[rel~='icon']");
         if (!link) {
             link = document.createElement('link');
@@ -46,6 +48,8 @@ export default {
             this.$ls.set('stars', this.showStars);
         }
         console.log("stars?", this.$ls.get('stars'));
+
+        this.screensaverEnabled = ("screensaver" in this.$route.query && this.$route.query.screensaver == null) || Boolean(this.$route.query.screensaver) || false;
     },
     methods: {
         toggleDarkMode() {
@@ -70,20 +74,22 @@ export default {
 </script>
 
 <template>
-    <BackgroundComponent :showStars="showStars" :isDarkMode="isDarkMode" />
-    <div class="wrapper-masthead">
-        <header class="container">
-            <HeaderComponent />
-        </header>
-    </div>
-    <main class="container">
-        <RouterView :isDarkMode="isDarkMode" @toggleDarkMode="toggleDarkMode" />
-    </main>
-    <footer class="footer">
-        <div class="container mt-5">
-            <FooterComponent :isDarkMode="isDarkMode" :showStars="showStars" @darkModeBtnClicked="toggleDarkMode" @starsBtnClicked="toggleStars"/>
+    <BackgroundComponent :showStars="showStars" :isDarkMode="isDarkMode" :screensaverMode="screensaverEnabled" />
+    <div id="main-content" v-if="!screensaverEnabled">
+        <div class="wrapper-masthead">
+            <header class="container">
+                <HeaderComponent />
+            </header>
         </div>
-    </footer>
+        <main class="container">
+            <RouterView :isDarkMode="isDarkMode" @toggleDarkMode="toggleDarkMode" />
+        </main>
+        <footer class="footer">
+            <div class="container mt-5">
+                <FooterComponent :isDarkMode="isDarkMode" :showStars="showStars" @darkModeBtnClicked="toggleDarkMode" @starsBtnClicked="toggleStars"/>
+            </div>
+        </footer>
+    </div>
 </template>
 
 <style scoped>
