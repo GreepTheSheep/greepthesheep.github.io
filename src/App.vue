@@ -50,6 +50,15 @@ export default {
         console.log("stars?", this.$ls.get('stars'));
 
         this.screensaverEnabled = ("screensaver" in this.$route.query && this.$route.query.screensaver == null) || Boolean(this.$route.query.screensaver) || false;
+        if (this.screensaverEnabled) {
+            document.querySelector("div#main-content").style.display = "none";
+            document.querySelector("body::-webkit-scrollbar").style.display = "none";
+            document.querySelector("body").style["scrollbar-width"] = "none";
+        } else {
+            document.querySelector("div#main-content").style.display = "";
+            document.querySelector("body::-webkit-scrollbar").style.display = "";
+            document.querySelector("body").style["scrollbar-width"] = "";
+        }
     },
     methods: {
         toggleDarkMode() {
@@ -75,7 +84,7 @@ export default {
 
 <template>
     <BackgroundComponent :showStars="showStars" :isDarkMode="isDarkMode" :screensaverMode="screensaverEnabled" />
-    <div id="main-content" v-if="!screensaverEnabled">
+    <div id="main-content">
         <div class="wrapper-masthead">
             <header class="container">
                 <HeaderComponent />
