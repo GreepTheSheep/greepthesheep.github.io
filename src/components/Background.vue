@@ -62,7 +62,7 @@ export default {
             let targetY = Math.floor(Math.random() * (yMax - yMin + 1)) + yMin;
 
             // Vitesse de déplacement
-            const speed = 10;
+            const speed = 3;
 
             setInterval(() => {
                 // Calculer la direction vers la cible
