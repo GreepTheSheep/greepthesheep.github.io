@@ -24,9 +24,9 @@ const router = createRouter({
             component: () => import('./views/TrackmaniaView.vue')
         },
         {
-            path: '/tmtfh',
-            name: 'TFH Temp page',
-            component: () => import('./views/TrackmaniaTFHTempView.vue')
+            path: '/nobackground',
+            name: 'This is a blank page, kinda',
+            component: () => import('./views/NoBackgroundView.vue')
         },
         {
             path: '/links',
