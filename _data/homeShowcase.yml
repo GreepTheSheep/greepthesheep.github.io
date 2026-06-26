@@ -1,3 +1,8 @@
+- name: My Wacky Watch
+  link: https://wackywatch.greep.fr
+  description: A website largely inspired by the official Wacky Watch website. Send your images and display them on the watch. Everything is done in your browser.
+  image: wacky_watch.png
+
 - name: Trackmania projects
   link: /tm
   description: I've done some works with Trackmania, I've made a few plugins and extensions for Trackmania with Openplanet, and some libraries with Trackmania.io.

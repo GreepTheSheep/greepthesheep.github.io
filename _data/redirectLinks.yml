@@ -7,5 +7,8 @@
 - path: /sponsor
   url: https://github.com/sponsors/GreepTheSheep
 
+- path: /kofi
+  url: https://ko-fi.com/greep
+
 - path: /rmc
   url: https://flinkblog.de/RMC/
