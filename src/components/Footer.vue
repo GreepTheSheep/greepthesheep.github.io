@@ -56,6 +56,7 @@ export default {
         <p>commit: {{ commit }}</p>
         <p v-if="!isDev">Built at: {{ builtAt }}</p>
         <p v-else>DEV MODE</p>
+        <p>This work is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
     </div>
 </template>
 
