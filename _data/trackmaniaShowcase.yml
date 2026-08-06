@@ -1,3 +1,8 @@
+- name: Community Matchmaking
+  link: https://openplanet.dev/plugin/cmm
+  description: An alternative matchmaking system for UGC and community-made game modes.
+  image: TMCommunityMatchmakingGlobeLogoWhite.png
+
 - name: Random Map Challenge
   link: /rmc
   description: In collaboration with the youtuber Flink, the Random Map Challenge is a game mode in which you have to get as many track medals as possible in one hour on random maps.
@@ -13,11 +18,6 @@
   description: A lightweight library in Node.js that provides formatting features and little additions for any development related to Trackmania.
   image: tm.png
 
-- name: Trackmania.io Discord bot
-  link: https://tmio.greep.fr/#/discord-bot
-  description: A Discord bot that interacts with the Trackmania.io API
-  image: tmio.png
-
 - name: ManiaExchange Randomizer
   link: https://openplanet.dev/plugin/mxrandom
   description: An Openplanet plugin used extensively during the Flink's Random Map Challenge. The goal is to take a random map of the Trackmania game from the TrackmaniaExchange site and play it directly in the game.
@@ -32,11 +32,6 @@
   link: https://openplanet.dev/plugin/speedrun
   description: A Speedrun Tool for Trackmania 2020
   image: tmSpeedruns.png
-
-- name: Cup Of Another Day
-  link: https://coad.greep.fr
-  description: A Knockout competiton on random Tracks Of The Day. Every Tuesdays at 20:00 CEST
-  image: coad.png
 
 - name: Open FlagRush Cup
   link: https://liquipedia.net/trackmania/FlagRush_Anniversary_Cup
